@@ -1,0 +1,55 @@
+
+
+
+.card , .card img {
+   transition: var(--main-transition);
+}
+.card  {
+   border: none !important;
+   overflow: hidden;
+}
+.card:hover  {
+   background-color: rgb(144, 148, 144);
+   color: white;
+}
+.card:hover img  {
+   scale: 1.1 ;
+}
+
+
+
+
+
+
+.carousel-img {
+   object-fit: fill; 
+}
+.carousel-item {
+   height: 500px; 
+}
+
+
+
+
+/* .home-slider{
+   margin: 120px 0px 20px 0px;
+} */
+
+
+
+
+/*^=================================================== Start Media Mobile ============================================== */
+@media (max-width: 990px){
+   .home-slider{
+      margin-top: 0px;
+   }
+}
+@media (min-width: 990px){
+   .home-slider{
+      margin-top: 0px;
+   }
+}
+
+/*^=================================================== End Media Mobile ============================================== */
+
+

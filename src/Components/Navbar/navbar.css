@@ -1,0 +1,244 @@
+
+
+.notificationAdmin {
+   position: absolute;
+   font-size: 14px ;
+   top: 50px;
+   right: 0;
+   background: rgb(215, 213, 213);
+   color: black;
+   font-weight: 300;
+   padding: 10px;
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   -ms-border-radius: 20px;
+   -o-border-radius: 20px;
+}
+.notification_admin {
+   min-width: 18px;
+   min-height: 18px;
+   font-size: 8px;
+   font-weight: bold;
+   letter-spacing: 1px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--second-color);
+   color: rgb(0, 0, 0);
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+   top: -8px;
+   right: -10px;
+}
+.notificationAdmin .notification-box{
+   width: 300px;
+   max-height: 400px;
+   overflow: auto;
+}
+
+.notificationAdmin .exist_Notification{
+   cursor: pointer;
+   padding: 5px 10px;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+.notificationAdmin .exist_Notification:hover{
+   background-color: red;
+   color: white !important;
+}
+
+
+
+
+
+.navbar-mobile-bottom {
+
+}
+.navbar-mobile-bottom .text-name {
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.navbar-mobile-bottom .navbar-mobile .cart-icon {
+   text-align: center;
+   transition: var(--main-transition);
+}
+.navbar-mobile-bottom .navbar-mobile .cart-icon:hover {
+   color: var(--main-color);
+}
+.navbar-mobile-bottom .div-mobile-imgCover {
+   margin: auto;
+   width: 65px;
+   height: 65px;
+   border: 2px solid white;
+   border-radius: 50%;
+   overflow: hidden;
+
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+}
+
+
+
+
+
+.navbar-other-media .main_navbar {
+   background-color: var(--main-color) !important;
+   transition: var(--main-transition);
+   -webkit-transition: var(--main-transition);
+   -moz-transition: var(--main-transition);
+   -ms-transition: var(--main-transition);
+   -o-transition: var(--main-transition);
+}
+.navbar-other-media .main_navbar a i ,
+.navbar-other-media .main_navbar button i{
+   margin-right: 10px !important;
+}
+.navbar-other-media .main_navbar a , 
+.navbar-other-media .main_navbar button {
+   font-size: 10px !important;
+   font-weight: bold;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+   letter-spacing: 0.5px;
+   margin: 0px 5px;
+}      
+.navbar-other-media .nav-link {
+   padding: 0px 5px ;
+   margin: 0 !important;
+   text-align: center ;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+   transition: var(--main-transition);
+   -webkit-transition: var(--main-transition);
+   -moz-transition: var(--main-transition);
+   -ms-transition: var(--main-transition);
+   -o-transition: var(--main-transition);
+} 
+.navbar-other-media .nav-link:hover  {
+   background-color:var(--main-color) !important;
+   color: white !important;
+}
+.navbar-other-media .active {
+   background-color:var(--main-color) !important;
+   color: white !important;
+   border: none !important;
+}
+.navbar-other-media .navbar .div_imgCover {
+   margin-right: 10px ;
+}
+.navbar-other-media .navbar .imgCover {
+   width: 30px ;
+   height: 30px;
+   margin: 0 10px;
+   border: 2px solid #ffffff;
+   border-radius: 50% ;
+   -webkit-border-radius: 50% ;
+   -moz-border-radius: 50% ;
+   -ms-border-radius: 50% ;
+   -o-border-radius: 50% ;
+}
+.navbar-other-media .navbar .notification {
+   min-width: 18px;
+   min-height: 18px;
+   font-size: 8px;
+   font-weight: bold;
+   letter-spacing: 1px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--second-color);
+   color: rgb(0, 0, 0);
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+   top: -5px;
+   right: 5px;
+}
+.navbar-other-media .navbar .btn_log {
+   border: 2px solid  transparent!important;
+}
+.navbar-other-media .navbar .btn_log:hover {
+   border: 2px solid white !important;
+}
+.navbar-other-media .navbar .div_logo {
+   width: 100px ;
+   height: 50px;
+}
+.navbar-other-media .logo {
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+}
+.navbar-other-media .fa-cart-shopping {
+   font-size: 20px;
+   margin-top: 10px;
+}
+.navbar-other-media .navbar .notification_cart {
+   min-width: 20px;
+   min-height: 20px;
+   font-size: 8px;
+   font-weight: bold;
+   letter-spacing: 1px;
+   background-color: var(--second-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+   top:-2px;
+   right: 10px;
+}
+
+
+
+
+
+
+/*^=================================================== Start Media Mobile ============================================== */
+@media (max-width: 990px){
+   .navbar-mobile-bottom {
+      display: block;
+   }
+   .navbar-other-media {
+      display: none;
+   }
+}
+@media (min-width: 990px){
+   .navbar-mobile-bottom ,
+   .navbar-mobile-bottom header {
+      display: none;
+   }
+   .navbar-other-media {
+      display: block;
+      margin-bottom: 70px;
+   }
+}
+
+/* @media (max-width: 990px){
+   .navbar-mobile-bottom {
+      display: block;
+   }
+   .navbar-other-media {
+      display: none;
+   }
+} */
+/*^=================================================== End Media Mobile ============================================== */

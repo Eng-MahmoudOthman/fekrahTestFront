@@ -1,0 +1,25 @@
+/* Ensure the form fits well in smaller screens */
+.form-control {
+   max-width: 100%;
+   box-sizing: border-box;
+}
+
+.d-table-cell label {
+   font-weight: bold;
+   white-space: nowrap;
+}
+
+.d-table-row {
+   border-bottom: 1px solid #ddd; /* Optional row divider */
+}
+
+.d-table-cell {
+   vertical-align: middle;
+}
+
+input[type ="checkbox"]{
+   margin: 10px 0px 0px 15px;
+}
+/* input:disabled{
+   background-color: red!important;
+} */

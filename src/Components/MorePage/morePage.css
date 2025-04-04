@@ -1,0 +1,18 @@
+
+.morePage-container{
+   
+}
+.morePage-container .account-card div{
+   padding: 4px 10px;
+   margin: 1px;
+}
+.morePage-container .account-card p{
+   font-size: 14px;
+}
+
+
+
+.btn-group .btn:hover  {
+   background-color: var(--main-color) ;
+   /* color: black; */
+}
