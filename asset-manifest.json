@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fekrahTestFront/static/css/main.e912f95c.css",
-    "main.js": "/fekrahTestFront/static/js/main.fe479d85.js",
+    "main.css": "/fekrahTestFront/static/css/main.87073591.css",
+    "main.js": "/fekrahTestFront/static/js/main.9563a6ec.js",
     "static/js/453.d2f52b65.chunk.js": "/fekrahTestFront/static/js/453.d2f52b65.chunk.js",
     "static/media/fa-solid-900.ttf": "/fekrahTestFront/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
     "static/media/home2.jpg": "/fekrahTestFront/static/media/home2.ac231911ade6c09ae817.jpg",
@@ -39,12 +39,12 @@
     "static/media/slick.ttf": "/fekrahTestFront/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/fekrahTestFront/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/fekrahTestFront/index.html",
-    "main.e912f95c.css.map": "/fekrahTestFront/static/css/main.e912f95c.css.map",
-    "main.fe479d85.js.map": "/fekrahTestFront/static/js/main.fe479d85.js.map",
+    "main.87073591.css.map": "/fekrahTestFront/static/css/main.87073591.css.map",
+    "main.9563a6ec.js.map": "/fekrahTestFront/static/js/main.9563a6ec.js.map",
     "453.d2f52b65.chunk.js.map": "/fekrahTestFront/static/js/453.d2f52b65.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e912f95c.css",
-    "static/js/main.fe479d85.js"
+    "static/css/main.87073591.css",
+    "static/js/main.9563a6ec.js"
   ]
 }
