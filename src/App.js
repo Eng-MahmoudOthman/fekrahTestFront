@@ -1,4 +1,4 @@
-import { RouterProvider , createBrowserRouter } from 'react-router-dom';
+import { RouterProvider , createBrowserRouter, createHashRouter } from 'react-router-dom';
 import './App.css';
 import { Toaster } from 'react-hot-toast';
 import { ToastContainer } from 'react-toastify';
@@ -78,8 +78,8 @@ const socket = io(process.env.REACT_APP_BASE_URL) ;
 console.log(socket);
 
 
-// let routers = createHashRouter([
-let routers = createBrowserRouter([
+let routers = createHashRouter([
+// let routers = createBrowserRouter([
 	{path:"/" , element:<Layout socket={socket}/> , children:[
 		{index:true , element:<Login/>} , 
 		{path:"register" , element:<Register/>} , 
