@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fekrahTestFront/static/css/main.e912f95c.css",
-    "main.js": "/fekrahTestFront/static/js/main.de1e593e.js",
+    "main.js": "/fekrahTestFront/static/js/main.48a14c4c.js",
     "static/js/453.d2f52b65.chunk.js": "/fekrahTestFront/static/js/453.d2f52b65.chunk.js",
     "static/media/fa-solid-900.ttf": "/fekrahTestFront/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
     "static/media/home2.jpg": "/fekrahTestFront/static/media/home2.ac231911ade6c09ae817.jpg",
@@ -40,11 +40,11 @@
     "static/media/slick.woff": "/fekrahTestFront/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/fekrahTestFront/index.html",
     "main.e912f95c.css.map": "/fekrahTestFront/static/css/main.e912f95c.css.map",
-    "main.de1e593e.js.map": "/fekrahTestFront/static/js/main.de1e593e.js.map",
+    "main.48a14c4c.js.map": "/fekrahTestFront/static/js/main.48a14c4c.js.map",
     "453.d2f52b65.chunk.js.map": "/fekrahTestFront/static/js/453.d2f52b65.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e912f95c.css",
-    "static/js/main.de1e593e.js"
+    "static/js/main.48a14c4c.js"
   ]
 }
