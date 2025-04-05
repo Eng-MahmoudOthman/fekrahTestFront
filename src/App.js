@@ -80,7 +80,7 @@ console.log(socket);
 
 // let routers = createHashRouter([
 let routers = createBrowserRouter([
-	{path:"" , element:<Layout socket={socket}/> , children:[
+	{path:"/" , element:<Layout socket={socket}/> , children:[
 		{index:true , element:<Login/>} , 
 		{path:"register" , element:<Register/>} , 
 		{path:"contact" , element:<Contact/>} , 
