@@ -111,8 +111,6 @@ export default function Navbar({socket}){
                                           <div className="d-inline-block position-relative div_imgCover">
                                              {notification.length ? <span className="position-absolute notification_admin p-1">{notification.length }</span> : ""} 
                                                 <i onClick={()=>{handleButtonDisplay()}} className="fa-regular fa-bell fa-xl"></i>
-                                                {/* <i onClick={()=>{handleButtonDisplay()}} className="fa-solid fa-bell fa-xl"></i> */}
-                                                {/* <img className="imgCover" src={JSON.parse(localStorage.getItem("user")).imgCover || avatar} alt="imgCover" /> */}
                                           </div>
                                           
 
@@ -226,153 +224,162 @@ export default function Navbar({socket}){
          <div className="navbar-mobile-bottom">
             {userToken && loggedUser ? <>
                      {admin || moderator? <>
+                        {/* Header */}
+                        <header className="mx-1 p-2  text-white bg-dark rounded text-center">
+                           <div className='row  align-items-center flex-column'>
 
-                           {/* Header */}
-                           <header className="m-2 pt-2 text-white bg-dark p-2 rounded text-center">
-                              <div className='row justify-content-evenly align-items-center'>
-                                 <div className='col-3 d-flex justify-content-evenly align-items-center p-0'>
-                                    <Link to="#"><i className="fa-regular fa-bell mx-3 fs-3"></i></Link>
-                                    <Link to="https://wa.me/201121737333"><i className="fa-regular fa-message  mx-3  fs-3"></i></Link>
+                              <div className='p-0'>
+                                 <div>
+                                    <Link  to="/home">
+                                       <h1 className="h5 m-0">Admin Dashboard</h1>
+                                    </Link>
                                  </div>
 
-                                 <div className='col-6'>
-                                    <div>
-                                       <Link  to="/dashBoard">
-                                          <h1 className="h2 m-0">Admin Dashboard</h1>
-                                       </Link>
-                                    </div>
 
-
-                                    <div>
-                                       <p className='m-0'>Welcome</p>
-                                       <p className='m-0 text-name'>{loggedUser.name.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).slice(0,2).join(" ")}</p>
-                                    </div>
-
-
-                                    <div  className="div-mobile-imgCover">
-                                       <Link to="/userProfile">
-                                          {
-                                             loggedUser?.imgCover ? 
-                                                <img src={loggedUser.imgCover} className="w-100" alt="imgProfile"/> 
-                                                : 
-                                                <img className="w-100" src={profileUrl} alt="imgProfile" />
-                                          }
-                                       </Link>
-                                    </div>
+                                 <div>
+                                    <p className='m-0'>{getGreeting()}</p>
+                                    <p className='m-0 text-name'>{loggedUser.name.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).slice(0,2).join(" ")}</p>
+                                    {/* <p className='m-0 text-name'>{loggedUser.name.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).slice(0,2).join(" ")}</p> */}
                                  </div>
 
-                                 <div className='col-3 d-flex justify-content-evenly align-items-center p-0'>
-                                    <Link  to="#"><i className="fa-solid fa-phone-volume mx-3  fs-3"></i></Link>
-                                    <Link  to="#"><i className="fa-solid fa-calendar-days mx-3  fs-3"></i></Link>
+
+                                 <div  className="div-mobile-imgCover">
+                                    <Link to="/userProfile">
+                                       {
+                                          loggedUser?.imgCover ? 
+                                             <img src={loggedUser.imgCover} className="w-100" alt="imgProfile"/> 
+                                             : 
+                                             <img className="w-100" src={profileUrl} alt="imgProfile" />
+                                       }
+                                    </Link>
                                  </div>
                               </div>
-                           </header>
 
-                           {/* Navbar Mobile Position Bottom  */}
-                           <nav className="navbar navbar-mobile navbar-dark bg-dark fixed-bottom text-white"> 
-                              <div className="container-fluid d-flex justify-content-evenly"> 
+                              <div className="d-flex justify-content-between align-items-center">
+                                 <div className='p-0'>
+                                    <Link to="#"><i className="fa-regular fa-bell mx-3 fs-4"></i></Link>
+                                    <Link to="https://wa.me/201121737333"><i class="fa-brands fa-whatsapp mx-3  fs-4"></i></Link>
+                                 </div>
+
+                                 <div className='p-0'>
+                                    <Link  to="#"><i className="fa-solid fa-phone-volume mx-3  fs-4"></i></Link>
+                                    <Link  to="#"><i className="fa-solid fa-calendar-days mx-3  fs-4"></i></Link>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </header>
+
+                        {/* Navbar Mobile Position Bottom  */}
+                        <nav className="navbar navbar-mobile navbar-dark bg-dark fixed-bottom text-white"> 
+                           <div className="container-fluid d-flex justify-content-evenly"> 
 
 
-                                    <Link to="/dashBoard" className="cart-icon">
-                                       <i className="fa-solid fa-chart-line"></i> 
-                                       <p className="m-0">Dashboard</p>
-                                    </Link>
+                                 <Link to="/dashBoard" className="cart-icon">
+                                    <i className="fa-solid fa-chart-line"></i> 
+                                    <p className="m-0">Dashboard</p>
+                                 </Link>
 
 
-                                    <Link to="/home" className="cart-icon">
-                                       <i className="fa-solid fa-house-user  fs-2 "></i> 
-                                       <p className="m-0">Home</p> 
-                                    </Link>
+                                 <Link to="/home" className="cart-icon">
+                                    <i className="fa-solid fa-house-user  fs-2 "></i> 
+                                    <p className="m-0">Home</p> 
+                                 </Link>
 
-                                    <Link to="/morePage" className="cart-icon">
-                                       <i className="fa-solid fa-ellipsis "></i>
-                                       <p className="m-0">More</p> 
-                                    </Link>
+                                 <Link to="/morePage" className="cart-icon">
+                                    <i className="fa-solid fa-ellipsis "></i>
+                                    <p className="m-0">More</p> 
+                                 </Link>
 
-                              </div> 
-                           </nav>
+                           </div> 
+                        </nav>
                      </> : <>
+                        {/* Header */}
+                        <header className="mx-1 p-2  text-white bg-dark rounded text-center">
+                           <div className='row  align-items-center flex-column'>
 
-                           {/* Header */}
-                           <header className="m-2 pt-2 text-white bg-dark p-2 rounded text-center">
-                              <div className='row justify-content-evenly align-items-center'>
-                                 <div className='col-3 d-flex justify-content-evenly align-items-center p-0'>
-                                    <Link to="#"><i className="fa-regular fa-bell mx-3 fs-3"></i></Link>
-                                    <Link to="https://wa.me/201121737333"><i className="fa-regular fa-message  mx-3  fs-3"></i></Link>
+                              <div className='p-0'>
+                                 <div>
+                                    <Link  to="/home">
+                                       <h1 className="h5 m-0">FEKRAH MEDICAL</h1>
+                                    </Link>
                                  </div>
 
-                                 <div className='col-6'>
-                                    <div>
-                                       <Link  to="/home">
-                                          <h1 className="h2 m-0">FEKRAH MEDICAL</h1>
-                                       </Link>
-                                    </div>
 
-
-                                    <div>
-                                       <p className='m-0'>{getGreeting()}</p>
-                                       <p className='m-0 text-name'>{loggedUser.name.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).slice(0,2).join(" ")}</p>
-                                    </div>
-
-
-                                    <div  className="div-mobile-imgCover">
-                                       <Link to="/userProfile">
-                                          {
-                                             loggedUser?.imgCover ? 
-                                                <img src={loggedUser.imgCover} className="w-100" alt="imgProfile"/> 
-                                                : 
-                                                <img className="w-100" src={profileUrl} alt="imgProfile" />
-                                          }
-                                       </Link>
-                                    </div>
+                                 <div>
+                                    <p className='m-0'>{getGreeting()}</p>
+                                    <p className='m-0 text-name'>{loggedUser.name.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).slice(0,2).join(" ")}</p>
+                                    {/* <p className='m-0 text-name'>{loggedUser.name.toLowerCase().split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).slice(0,2).join(" ")}</p> */}
                                  </div>
 
-                                 <div className='col-3 d-flex justify-content-evenly align-items-center p-0'>
+
+                                 <div  className="div-mobile-imgCover">
+                                    <Link to="/userProfile">
+                                       {
+                                          loggedUser?.imgCover ? 
+                                             <img src={loggedUser.imgCover} className="w-100" alt="imgProfile"/> 
+                                             : 
+                                             <img className="w-100" src={profileUrl} alt="imgProfile" />
+                                       }
+                                    </Link>
+                                 </div>
+                              </div>
+
+                              <div className="d-flex justify-content-between align-items-center">
+                                 <div className='p-0'>
+                                    <Link to="#" className="notification-mobile d-inline-block position-relative ">
+                                       <span className="notification-icon"></span>
+                                       <i className="fa-solid fa-bell mx-3 fs-4"></i>
+                                    </Link>
+                                    <Link to="https://wa.me/201121737333"><i class="fa-brands fa-whatsapp mx-3  fs-3"></i></Link>
+                                 </div>
+
+                                 <div className='p-0'>
                                     <Link  to="#"><i className="fa-solid fa-phone-volume mx-3  fs-3"></i></Link>
                                     <Link  to="#"><i className="fa-solid fa-calendar-days mx-3  fs-3"></i></Link>
                                  </div>
                               </div>
-                           </header>
+
+                           </div>
+                        </header>
+
+                        {/* Navbar Mobile Position Bottom  */}
+                        <nav className="navbar navbar-mobile navbar-dark bg-dark fixed-bottom text-white"> 
+                           <div className="container-fluid d-flex justify-content-evenly"> 
+
+                                 <Link to="#" className="cart-icon">
+                                    <i className="fa-solid fa-gift"></i> 
+                                    <p className="m-0">العروض</p> 
+                                 </Link>
+
+
+                                 <Link to="/allOrderLoggedUser" className="cart-icon">
+                                    <i className="fa-solid fa-truck"></i> 
+                                    <p className="m-0">الاوردرات</p> 
+                                 </Link>
 
 
 
-                           {/* Navbar Mobile Position Bottom  */}
-                           <nav className="navbar navbar-mobile navbar-dark bg-dark fixed-bottom text-white"> 
-                              <div className="container-fluid d-flex justify-content-evenly"> 
 
-                                    <Link to="#" className="cart-icon">
-                                       <i className="fa-solid fa-gift"></i> 
-                                       <p className="m-0">العروض</p> 
-                                    </Link>
+                                 <Link to="/home" className="cart-icon">
+                                    <i className="fa-solid fa-house-user  fs-2 "></i> 
+                                    <p className="m-0">الرئيسية</p> 
+                                 </Link>
 
 
-                                    <Link to="/allOrderLoggedUser" className="cart-icon">
-                                       <i className="fa-solid fa-truck"></i> 
-                                       <p className="m-0">الاوردرات</p> 
-                                    </Link>
+                                 <Link to="/cart" className="cart-icon">
+                                    <i className="fa-solid fa-cart-plus "></i> 
+                                    <p className="m-0">السلة</p>
+                                 </Link>
 
 
+                                 <Link to="/morePage" className="cart-icon">
+                                    <i className="fa-solid fa-ellipsis "></i>
+                                    <p className="m-0">المزيد</p> 
+                                 </Link>
 
-
-                                    <Link to="/home" className="cart-icon">
-                                       <i className="fa-solid fa-house-user  fs-2 "></i> 
-                                       <p className="m-0">الرئيسية</p> 
-                                    </Link>
-
-
-                                    <Link to="/cart" className="cart-icon">
-                                       <i className="fa-solid fa-cart-plus "></i> 
-                                       <p className="m-0">السلة</p>
-                                    </Link>
-
-
-                                    <Link to="/morePage" className="cart-icon">
-                                       <i className="fa-solid fa-ellipsis "></i>
-                                       <p className="m-0">المزيد</p> 
-                                    </Link>
-
-                              </div> 
-                           </nav>
+                           </div> 
+                        </nav>
                      </>}
                </> : ""
             }

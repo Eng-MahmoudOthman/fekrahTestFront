@@ -28,7 +28,7 @@ export default function Cart() {
             <div className='under-header'></div>
 
 
-               {error? <div className='alert alert-danger w-75 p-1 m-auto text-center'>{error}</div> : <>
+               {error? <div className='text-danger w-75 p-1 m-auto text-center'>{error}</div> : <>
                
                   <div className="row border border-4 border-white m-2">
                      <div className="col-4 p-0">
@@ -103,9 +103,9 @@ export default function Cart() {
             <div className='d-flex justify-content-evenly align-items-center w-75 m-auto my-3'>
                <button onClick={()=>{clearCart()}} className='btn btn-outline-danger btn-sm d-block w-50 me-2'>Clear Cart</button>
                {error ? 
-                  <><Link to={`/price`} className='btn bg-main btn-sm d-block w-50'>Continue Added Test</Link></> 
+                  <><Link to={`/price`} className='btn bg-main btn-sm d-block w-50'>Added Test</Link></> 
                   : 
-                  <><Link to={`/addTest/${companyId}`} className='btn  bg-main btn-sm d-block w-50'>Continue Added Test</Link></>}
+                  <><Link to={`/addTest/${companyId}`} className='btn  bg-main btn-sm d-block w-50'>Added Test</Link></>}
             </div>
 
          </div>

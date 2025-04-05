@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
-
+import "./footer.css"
 
 export default function Footer(){
 
@@ -8,7 +8,7 @@ export default function Footer(){
    return (
       <Fragment>
          <footer className="footer my-5 py-3 text-white text-center">
-            <div className="container p-4 ">
+            <div className="container-fluid p-4 ">
                <h4 className=" h1 fw-bold text-center mb-2">Fekra Medical </h4>
                <div className="row">
 
@@ -20,13 +20,14 @@ export default function Footer(){
                      </p>
                   </div>
 
-                  <div className="row mt-4">
+                  <div className="row mt-4 mx-0">
 
-                     <div className="hstack gap-3 col-md-6">
-                        <input className="form-control me-auto" type="text" placeholder="Add your Notes here..." aria-label="Add your item here..." />
+                     <div className="hstack gap-1 col-md-6">
+                        <input className="form-control me-auto py-1 px-3" type="text" placeholder="Add your Notes here..." aria-label="Add your item here..." />
                         <div className="vr" />
                         <button type="button" className="btn btn-sm btn-danger ">Submit</button>
                      </div>
+
 
 
                      <div className="col-md-6 d-flex justify-content-center align-items-center parentIcon">

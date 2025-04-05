@@ -61,6 +61,27 @@
 .navbar-mobile-bottom {
 
 }
+.navbar-mobile-bottom i{
+   /* position: relative; */
+}
+.navbar-mobile-bottom .notification-icon{
+   position: absolute;
+   top: -5px;
+   left: 30px;
+   width: 10px;
+   height: 10px;
+   background-color: red;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+}
+
+
+.navbar-mobile-bottom i:hover {
+   color: var(--main-color);
+}
 .navbar-mobile-bottom .text-name {
    font-size: 18px;
    font-weight: bold;

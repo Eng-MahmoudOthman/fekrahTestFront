@@ -31,17 +31,19 @@
 
 
 
-/* .home-slider{
-   margin: 120px 0px 20px 0px;
-} */
 
 
 
 
-/*^=================================================== Start Media Mobile ============================================== */
+
+
+
 @media (max-width: 990px){
    .home-slider{
       margin-top: 0px;
+   }
+   .home-box {
+      font-size: 14px !important;
    }
 }
 @media (min-width: 990px){
@@ -50,6 +52,5 @@
    }
 }
 
-/*^=================================================== End Media Mobile ============================================== */
 
 

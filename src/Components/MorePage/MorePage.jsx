@@ -28,7 +28,7 @@ export default function MorePage() {
       {name:"تغيير كلمة المرور" , url:"#" , icon:<i class="fa-solid fa-lock"></i>} ,
       {name:"عن أحجز " , url:"#" , icon:<i class="fa-regular fa-font-awesome"></i>} ,
       {name:"أتصل بنا" , url:"#" , icon:<i class="fa-solid fa-phone"></i>} ,
-      {name:"اللغة " , url:"/" , icon:<i class="fa-solid fa-earth-americas"></i>} ,
+      {name:"اللغة " ,  click:""  , icon:<i class="fa-solid fa-earth-americas"></i>} ,
       {name:"خروج" , click:logOut , icon:<i class="fa-solid fa-right-from-bracket"></i>} ,
    ]
 
@@ -51,7 +51,7 @@ export default function MorePage() {
       <>
          <div className="container morePage-container">
             <div className='text-center'>
-               <Link to={`/updateUserProfile`} className='btn btn-success w-25' >تعديل بياناتى</Link>
+               <Link to={`/updateUserProfile`} className='btn btn-success w-50 mt-2' >تعديل بياناتى</Link>
                <p className='my-2'> أحجز العادية  |    1440</p>
             </div>
 
@@ -76,8 +76,8 @@ export default function MorePage() {
                   <div key={index} className="col-6 col-md-4">
                      <div className='p-1'>
                         <Link to={ele.url?ele.url:""} onClick={ele.click?()=>{ele.click()}:""}  className='btn btn-secondary w-100 border-0'>
-                           <div className='d-flex justify-content-between align-items-center px-4'>
-                              <span className='d-inline-block'>{ele.name}</span>
+                           <div className='d-flex justify-content-between align-items-center'>
+                              <span className='text-box-more'>{ele.name}</span>
                               {ele.icon}
                            </div>
                         </Link>

@@ -116,21 +116,21 @@ export default function Login({socket}){
 
    return (
       <Fragment>
-         <div className="login-container">
+         <div className="container-fluid login-container">
             <div className="row">
                <div className="col-lg-6">
                   <div className="logoImage"></div>
                </div>
 
                <div className="col-lg-6">
-                  <div className=" w-100 p-5">
+                  <div className=" w-100 p-3">
                   <h1 className="main-header">تسجيل الدخول</h1>
 
-                  <p className="login-sub-title text-center">Enter your email and password to sign in</p>
+                  <p className="login-sub-title text-center">Enter your email and password</p>
 
                   <form action="" onSubmit={formik.handleSubmit}>
 
-                     {error?<div className="alert alert-danger w-75  my-4">{error}</div> :""}
+                     {error?<p className="text-danger">{error}</p> :""}
 
                      <div className="my-4 position-relative">
                         <i className="fas fa-user icon-input-field"></i>

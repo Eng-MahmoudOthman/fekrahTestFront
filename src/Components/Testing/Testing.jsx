@@ -61,13 +61,13 @@ export default function Testing() {
 
 
          {/* Services Grid */}
-         <div className="row g-2 bg-body-secondary rounded-2">
+         <div className="row g-2 bg-body-secondary rounded-2 home-box">
             {services.map((service, index) => (
                <div key={index} className="col-4 col-lg-2 my-1">
                   <Link to={service.url}>
                      <div className="card text-center p-1">
-                        <div className="mb-2"><img src={service.icon} className='w-25' alt="cover"/></div>
-                        <p className="h6">{service.name}</p>
+                        <div className="mb-1"><img src={service.icon} className='w-25' alt="cover"/></div>
+                        <p className='m-0'>{service.name}</p>
                      </div>
                   </Link>
                </div>
