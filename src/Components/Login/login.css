@@ -2,11 +2,7 @@
 .login-container .register-text {
    font-size: 14px;
 }
-.login-container .login-sub-title  {
-   font-size: 20px;
-   opacity: 50%;
-   color: var(--main-color);
-}
+
 
 .login-container  .logoImage {
    width: 100%;

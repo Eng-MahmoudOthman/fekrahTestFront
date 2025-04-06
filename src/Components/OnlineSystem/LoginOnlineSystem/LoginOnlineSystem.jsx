@@ -97,7 +97,14 @@ export default function LoginOnlineSystem(){
                      onBlur={formik.handleBlur}
                      className="form-control" id="password"  
                      name="password" 
-                     placeholder="Enter Password" />
+                     placeholder="Enter Password" 
+                     
+                     /** ==== Prevent Copy , Cut , paste , Right Click ==== */
+                     onCopy={(e) => e.preventDefault()}
+                     onPaste={(e) => e.preventDefault()}
+                     onCut={(e) => e.preventDefault()}
+                     onContextMenu={(e) => e.preventDefault()}
+                     />
                   {formik.errors.password && formik.touched.password?<div className="alert alert-danger mt-4 p-2">{formik.errors.password}</div> :""}
                </div>
 

@@ -25,7 +25,7 @@ export default function MorePage() {
       {name:"مشترياتى" , url:"#" , icon:<i class="fa-solid fa-bag-shopping"></i>} ,
       {name:"أحجز بلس" , url:"#" , icon:<i class="fa-solid fa-crown"></i>} ,
       {name:"مقدمى الخدمات" , url:"#" , icon:<i class="fa-solid fa-briefcase-medical"></i>} ,
-      {name:"تغيير كلمة المرور" , url:"#" , icon:<i class="fa-solid fa-lock"></i>} ,
+      {name:"تغيير كلمة المرور" , url:"/ChangePassword" , icon:<i class="fa-solid fa-lock"></i>} ,
       {name:"عن أحجز " , url:"#" , icon:<i class="fa-regular fa-font-awesome"></i>} ,
       {name:"أتصل بنا" , url:"#" , icon:<i class="fa-solid fa-phone"></i>} ,
       {name:"اللغة " ,  click:""  , icon:<i class="fa-solid fa-earth-americas"></i>} ,

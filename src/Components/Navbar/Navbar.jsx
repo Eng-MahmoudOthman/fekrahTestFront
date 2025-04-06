@@ -295,7 +295,7 @@ export default function Navbar({socket}){
                         </nav>
                      </> : <>
                         {/* Header */}
-                        <header className="mx-1 p-2  text-white bg-dark rounded text-center">
+                        <header className="m-1 p-2  text-white bg-dark rounded text-center">
                            <div className='row  align-items-center flex-column'>
 
                               <div className='p-0'>
@@ -357,8 +357,6 @@ export default function Navbar({socket}){
                                     <i className="fa-solid fa-truck"></i> 
                                     <p className="m-0">الاوردرات</p> 
                                  </Link>
-
-
 
 
                                  <Link to="/home" className="cart-icon">

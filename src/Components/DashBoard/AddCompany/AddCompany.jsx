@@ -12,10 +12,16 @@ export default function AddCompany() {
 
       const [selectedFile, setSelectedFile] = useState(null);
       const [isLoadingAdded, setIsLoadingAdded] = useState(false);
+      const [showPassword, setShowPassword] = useState(false);
       const navigate = useNavigate() ;
       const token = `${process.env.REACT_APP_SECRET_TOKEN} ${localStorage.getItem("token") }`;
 
-      
+
+      const togglePassword = () => {
+         setShowPassword((prev) => !prev);
+      };
+
+
       async function getData(file , values){
          setIsLoadingAdded(true)
          const formData = new FormData()
@@ -110,7 +116,7 @@ export default function AddCompany() {
 
 
                         <div  className='mt-2'>
-                              <label htmlFor="name" className="form-label">Add Company Name</label>
+                              <label htmlFor="name" className="form-label required">Add Company Name</label>
                               <Field type="text" className="form-control"  name="name" id="name" />
                               {/* {selectedFile && <p>name: {selectedFile.name}</p>} */}
                               <ErrorMessage name="name" component="div" className="text-danger" />
@@ -118,7 +124,7 @@ export default function AddCompany() {
 
 
                         <div  className='mt-4'>
-                              <label htmlFor="description" className="form-label">Add Description</label>
+                              <label htmlFor="description" className="form-label required">Add Description</label>
                               <Field type="text"  name="description" id="description" className="form-control"/>
                               {/* {selectedFile && <p>Description: {selectedFile.name}</p>} */}
                               <ErrorMessage name="description" component="div" className="text-danger" />
@@ -126,7 +132,7 @@ export default function AddCompany() {
 
 
                         <div  className='mt-4'>
-                              <label htmlFor="address" className="form-label">Add address</label>
+                              <label htmlFor="address" className="form-label required">Add address</label>
                               <Field type="text"  name="address" id="address" className="form-control"/>
                               {/* {selectedFile && <p>address: {selectedFile.name}</p>} */}
                               <ErrorMessage name="address" component="div" className="text-danger" />
@@ -134,7 +140,7 @@ export default function AddCompany() {
 
 
                         <div  className='mt-4'>
-                              <label htmlFor="phone" className="form-label">Add phone</label>
+                              <label htmlFor="phone" className="form-label required">Add phone</label>
                               <Field type="text"  name="phone" id="phone" className="form-control"/>
                               {/* {selectedFile && <p>phone: {selectedFile.name}</p>} */}
                               <ErrorMessage name="phone" component="div" className="text-danger" />
@@ -142,23 +148,51 @@ export default function AddCompany() {
 
 
                         <div  className='mt-4'>
-                              <label htmlFor="email" className="form-label">Add email</label>
-                              <Field type="text"  name="email" id="email" className="form-control"/>
+                              <label htmlFor="email" className="form-label required">Add email</label>
+                              <Field 
+                                 type="text"  
+                                 name="email" 
+                                 id="email" 
+                                 className="form-control" 
+                              />
                               {/* {selectedFile && <p>email: {selectedFile.name}</p>} */}
                               <ErrorMessage name="email" component="div" className="text-danger" />
                         </div>
 
 
-                        <div  className='mt-4'>
-                              <label htmlFor="password" className="form-label">Add password</label>
-                              <Field type="text"  name="password" id="password" className="form-control"/>
+                        <div  className='mt-4 position-relative'>
+                              <label htmlFor="password" className="form-label required">Add password</label>
+                     <i className="fas fa-lock icon-input-field"></i>
+
+                              <Field 
+                                 type={showPassword ? "text" : "password"}  
+                                 name="password" 
+                                 id="password" 
+                                 className="form-control"
+                                 
+                                 /** ==== Prevent Copy , Cut , paste , Right Click ==== */
+                                 onCopy={(e) => e.preventDefault()}
+                                 onPaste={(e) => e.preventDefault()}
+                                 onCut={(e) => e.preventDefault()}
+                                 onContextMenu={(e) => e.preventDefault()}
+                              />
                               {/* {selectedFile && <p>password: {selectedFile.name}</p>} */}
+
+                              <i className="fas fa-eye toggle-password"></i>
+
+
+                              {showPassword ? (
+                                 <i className="fas fa-eye toggle-password" onClick={() => setShowPassword(false)}></i>
+                              ) : (
+                                 <i className="fas fa-eye-slash toggle-password" onClick={() => setShowPassword(true)}></i>
+                              )}
+
                               <ErrorMessage name="password" component="div" className="text-danger" />
                         </div>
 
 
                         <div className='mt-4'>
-                              <label htmlFor="image" className="form-label">Upload Image:</label>
+                              <label htmlFor="image" className="form-label required">Upload Image:</label>
                               <input type="file" className="text-danger form-control" onChange={(event) => {setSelectedFile(event.target.files[0]);setFieldValue('file', event.target.files[0]);}}/>
                               {/* {selectedFile && <p>Selected File: {selectedFile.name}</p>} */}
                               <ErrorMessage name="file" component="div" className="text-danger" />

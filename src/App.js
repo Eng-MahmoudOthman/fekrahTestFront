@@ -70,6 +70,8 @@ import MorePage from './Components/MorePage/MorePage.jsx';
 import UpdateUserProfile from './Components/UpdateUserProfile/UpdateUserProfile.jsx';
 import ChangeUserImage from './Components/ChangeUserImage/ChangeUserImage.jsx';
 import SickHistory from './Components/SickHistory/SickHistory.jsx';
+import ChangePassword from './Components/ChangePassword/ChangePassword.jsx';
+import ForgetPassword from './Components/ForgetPassword/ForgetPassword.jsx';
 const socket = io(process.env.REACT_APP_BASE_URL) ;
 // const socket = io("https://fekrah-medical-vercel.vercel.app") ;
 // const socket = io("http://localhost:5000") ;
@@ -111,6 +113,8 @@ let routers = createHashRouter([
 		{path:"UpdateUserProfile" , element:<ProtectedRoute><UpdateUserProfile/></ProtectedRoute>} , 
 		{path:"ChangeUserImage" , element:<ProtectedRoute><ChangeUserImage/></ProtectedRoute>} , 
 		{path:"SickHistory" , element:<ProtectedRoute><SickHistory/></ProtectedRoute>} , 
+		{path:"ChangePassword" , element:<ProtectedRoute><ChangePassword/></ProtectedRoute>} , 
+		{path:"ForgetPassword" , element:<ForgetPassword/>} , 
 
 
 		{path:"order/" , element:<ProtectedRoute><Order/> </ProtectedRoute>, children:[

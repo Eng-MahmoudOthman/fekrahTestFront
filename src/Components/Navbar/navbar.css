@@ -88,7 +88,9 @@
 }
 
 .navbar-mobile-bottom .navbar-mobile .cart-icon {
-   text-align: center;
+   width: calc(20%);
+   text-align: center ;
+   display: inline-block ;
    transition: var(--main-transition);
 }
 .navbar-mobile-bottom .navbar-mobile .cart-icon:hover {

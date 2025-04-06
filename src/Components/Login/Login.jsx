@@ -126,7 +126,7 @@ export default function Login({socket}){
                   <div className=" w-100 p-3">
                   <h1 className="main-header">تسجيل الدخول</h1>
 
-                  <p className="login-sub-title text-center">Enter your email and password</p>
+                  <p className="sub-title text-center">Enter your email and password</p>
 
                   <form action="" onSubmit={formik.handleSubmit}>
 
@@ -161,7 +161,14 @@ export default function Login({socket}){
                            className="form-control" id="password"  
                            name="password" 
                            required
-                           placeholder="Enter Password" />
+                           placeholder="Enter Password" 
+
+                           /** ==== Prevent Copy , Cut , paste , Right Click ==== */
+                           onCopy={(e) => e.preventDefault()}
+                           onPaste={(e) => e.preventDefault()}
+                           onCut={(e) => e.preventDefault()}
+                           onContextMenu={(e) => e.preventDefault()}
+                           />
                         {
                            formik.errors.password && formik.touched.password?
                               <p className="text-danger m-0 p-0">{formik.errors.password}</p> 
@@ -184,7 +191,14 @@ export default function Login({socket}){
                            : 
                               <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn bg-main text-white  mt-2">Login</button>
                         }
-                        <p className="register-text text-center mt-1">Don't have an account?<Link className="m-1 text-primary" to="/register" >  Sign up </Link></p>
+                        <div className="row">
+                           <div className="col-md-6">
+                              <p className="register-text text-center mt-1 ">Don't have an account?<Link className="m-1 main-color" to="/register" >  Sign up </Link></p>
+                           </div>
+                           <div className="col-md-6">
+                              <p className="register-text text-center mt-1"><Link className="m-1 main-color" to="/ForgetPassword" ><i class="fa-solid fa-lock me-2"></i> Forget Password ?</Link></p>
+                           </div>
+                        </div>
                      </div>
 
                   </form>
